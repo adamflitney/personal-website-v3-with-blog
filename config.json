@@ -1,19 +1,19 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://www.adamflitney.com",
+  "site_title": "AdamFlitney.com",
+  "site_description": "The personal website of Adam Flitney",
   "site_keywords": [
     {
-      "keyword": "Next.js"
+      "keyword": "adamflitney"
     },
     {
-      "keyword": "Netlify"
+      "keyword": "homepage"
     },
     {
-      "keyword": "React"
+      "keyword": "portfolio"
     }
   ],
   "posts_per_page": 5,
-  "twitter_account": "@my-account",
-  "github_account": "wutali"
+  "twitter_account": "@adamflitney",
+  "github_account": "adamflitney"
 }
