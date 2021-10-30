@@ -22,7 +22,7 @@ export default function Layout({ children }: Props) {
         {`
           .root {
             display: block;
-            padding: 4rem 0;
+            padding: 0;
             box-sizing: border-box;
             height: 100%;
           }
@@ -33,6 +33,7 @@ export default function Layout({ children }: Props) {
           @media (min-width: 769px) {
             .root {
               display: flex;
+              flex-direction: column;
               flex: 1 0 auto;
             }
             main {

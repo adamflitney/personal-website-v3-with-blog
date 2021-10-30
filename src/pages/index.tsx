@@ -3,6 +3,7 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
+import Avataaar from "../assets/me-avataaar.svg";
 
 export default function Index() {
   return (
@@ -12,11 +13,14 @@ export default function Index() {
       <TwitterCardMeta url={"/"} />
       <div className="container">
         <div>
+          <div className="avatar">
+            <Avataaar />
+          </div>
           <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
+            Hi, I'm <span className="fancy">Adam Flitney</span>!
           </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
+          <h2>A full stack developer who loves javascript and all things front end.</h2>
+          <p></p>
           <SocialList />
         </div>
       </div>
@@ -39,21 +43,21 @@ export default function Index() {
           line-height: 1.25;
         }
         .fancy {
-          color: #15847d;
-        }
-        .handle {
-          display: inline-block;
-          margin-top: 0.275em;
-          color: #9b9b9b;
-          letter-spacing: 0.05em;
+          color: var(--colors-fancy);
         }
 
         @media (min-width: 769px) {
+          .container > div {
+            margin-top: -12rem;
+          }
           h1 {
             font-size: 3rem;
           }
           h2 {
             font-size: 2.25rem;
+          }
+          .avatar {
+            margin-bottom: 2rem;
           }
         }
       `}</style>
