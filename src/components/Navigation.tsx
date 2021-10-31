@@ -39,7 +39,6 @@ export default function Navigation() {
               padding: 0;
               position: fixed;
               bottom: 0;
-              background-color: #fff;
               display: flex;
               flex-direction: row;
               justify-content: space-evenly;
@@ -81,7 +80,6 @@ export default function Navigation() {
                 margin-right: 2rem;
               }
               .active {
-                color: #222;
                 text-decoration: underline;
                 text-decoration-color: var(--colors-fancy);
               }

@@ -5,6 +5,10 @@ type Props = {
   children: React.ReactNode;
 };
 export default function Layout({ children }: Props) {
+  const toggleTheme = () => {
+    let currentTheme = document.body.dataset.theme
+    document.body.dataset.theme = currentTheme === 'light' ? 'dark' : 'light';
+  }
   return (
     <div className="root">
       <Head>
@@ -15,7 +19,9 @@ export default function Layout({ children }: Props) {
         <meta name="theme-color" content="#fff" />
       </Head>
       <nav>
+        
         <Navigation />
+        <button onClick={() => toggleTheme()}>Toggle theme</button>
       </nav>
       <main>{children}</main>
       <style jsx>
@@ -29,6 +35,9 @@ export default function Layout({ children }: Props) {
           main {
             display: flex;
             min-height: 100%;
+          }
+          button {
+            margin-top: 50px;
           }
           @media (min-width: 769px) {
             .root {

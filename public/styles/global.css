@@ -3,30 +3,46 @@
 
 :root {
   --colors-fancy: #0582CA;
+  --timings-default: 0.25s;
+  --eases-default: ease-in-out;
+}
+
+body[data-theme="light"] {
+  --colors-background: #fff;
+  --colors-text: #222;
+  
+}
+
+body[data-theme="dark"] {
+  --colors-background: rgb(33, 33, 34);
+  --colors-text: rgb(199, 199, 199);
 }
 
 html,
 body {
   font-family: "Ubuntu", sans-serif;
-  background-color: #fff;
-  color: #222;
   font-weight: 200;
+  background-color: var(--colors-background);
+  color: var(--colors-text);
   height: 100%;
+  transition: background-color var(--timings-default) var(--eases-default), color var(--timings-default) var(--eases-default);
 }
+
+
 
 #__next {
   height: 100%;
 }
 
 a {
-  color: #222;
+  color: var(--colors-text);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:active,
 a:hover {
-  color: #000;
+  color: var(--colors-text);
 }
 
 .youtube-container {

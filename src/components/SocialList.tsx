@@ -15,7 +15,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <Twitter width={24} height={24} fill={"#222"} />
+        <Twitter width={24} height={24} fill={"var(--colors-text)"} />
       </a>
       <a
         title="GitHub"
@@ -23,7 +23,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <GitHub width={24} height={24} fill={"#222"} />
+        <GitHub width={24} height={24} fill={"var(--colors-text)"} />
       </a>
       <a
         title="GitLab"
@@ -31,7 +31,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <GitLab width={24} height={24} fill={"#222"} />
+        <GitLab width={24} height={24} fill={"var(--colors-text)"} />
       </a>
       <a
         title="Codepen"
@@ -39,7 +39,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <Codepen width={24} height={24} fill={"#222"} />
+        <Codepen width={24} height={24} fill={"var(--colors-text)"} />
       </a>
       <a
         title="LinkedIn"
@@ -47,7 +47,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <LinkedIn width={24} height={24} fill={"#222"} />
+        <LinkedIn width={24} height={24} fill={"var(--colors-text)"} />
       </a>
       <style jsx>{`
         a {
@@ -55,6 +55,9 @@ export function SocialList({}) {
         }
         a:not(:last-child) {
           margin-right: 2em;
+        }
+        svg {
+          transition: 0.5s ease-in-out;
         }
       `}</style>
     </div>
