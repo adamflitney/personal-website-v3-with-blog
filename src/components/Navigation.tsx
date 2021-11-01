@@ -43,7 +43,6 @@ export default function Navigation() {
               flex-direction: row;
               justify-content: space-evenly;
               align-items: center;
-              z-index: 1;
               transition: color 200ms;
             }
             .active ul {

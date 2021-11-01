@@ -1,14 +1,16 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import Navigation from "./Navigation";
+
+
+const ThemeToggle = dynamic(() => import('../components/ThemeToggle'), {
+  ssr: false
+});
 
 type Props = {
   children: React.ReactNode;
 };
 export default function Layout({ children }: Props) {
-  const toggleTheme = () => {
-    let currentTheme = document.body.dataset.theme
-    document.body.dataset.theme = currentTheme === 'light' ? 'dark' : 'light';
-  }
   return (
     <div className="root">
       <Head>
@@ -19,9 +21,11 @@ export default function Layout({ children }: Props) {
         <meta name="theme-color" content="#fff" />
       </Head>
       <nav>
-        
+        <div className="top-bar">
         <Navigation />
-        <button onClick={() => toggleTheme()}>Toggle theme</button>
+        <ThemeToggle />
+          </div>
+        
       </nav>
       <main>{children}</main>
       <style jsx>
@@ -47,6 +51,9 @@ export default function Layout({ children }: Props) {
             }
             main {
               flex: 1 0 auto;
+            }
+            .top-bar {
+              padding: 1rem;
             }
           }
         `}
